@@ -38,6 +38,9 @@
        var marginL;
        //拖动开始
        touch.on("body","dragstart","ul",function(){
+           $("ul").css({
+               transition:"none"
+           })
            marginL=parseInt($("ul").css("marginLeft"))?parseInt($("ul").css("marginLeft")):0;
            /*console.log( typeof marginLeft);*/
        })
