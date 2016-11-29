@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="zepto.js"></script>
+    <script src="touch.js"></script>
+</head>
+<style>
+    *{
+        margin:0;padding: 0;
+    }
+    .box{
+        width:300px;height:300px;
+        font-size: 250px;
+        line-height: 300px;text-align: center;color: #fff;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var box=document.querySelector(".box");
+        touch.on("body","rotate",".box",function(e){
+            e.startRotate();
+        });
+        touch.on("body","rotate",".box",function(e){
+            e.startRotate();
+        });
+    }
+</script>
+<body>
+<div class="box" style="background:palevioletred ">01</div>
+</body>
+</html>
