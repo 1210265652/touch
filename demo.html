@@ -47,6 +47,7 @@
        //拖动
        touch.on("body","drag","ul",function(e){
             $("ul").css({
+                transition:"none",
                 marginLeft:marginL+e.x
             })
        })
@@ -60,7 +61,8 @@
                         num=$("li").length-1;
                     }
                     $("ul").css({
-                        marginLeft:-num*width
+                        marginLeft:-num*width,
+                        transition:"margin 2s ease"
                     })
                 }else if(e.direction=="right"){
                     num--;
@@ -68,13 +70,14 @@
                         num=0;
                     }
                     $("ul").css({
-                        marginLeft:-num*width
+                        marginLeft:-num*width,
+                        transition:"margin 2s ease"
                     })
                 }
             }else{
                 $("ul").css({
                     marginLeft:-num*width,
-                    transition:"margin 1s ease"
+                    transition:"margin 2s ease"
                 })
             }
        })
